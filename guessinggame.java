@@ -23,13 +23,13 @@ public class Main {
             return "Your guess is invalid";
         }
         else if (userGuessedNumber == generatedNumber){
-            return "Correct!\nTotal Guesses: " + (count+1) + " and your score is " + (score - (count * 10));
+            return "Correct!\nTotal Guesses : " + (count+1) + System.lineSeparator() +"Score : " + (score - (count * 10));
         }
         else if (userGuessedNumber > generatedNumber) {
-            return "Your guess is greater, try a lesser number.\nTry Number: " + (userGuessedNumber - 1);
+            return "Your guess is Greater, try a Lesser Number.\nTry Number: " + (userGuessedNumber - 1);
         }
         else {
-            return "Your guess is lesser, try greater number.\nTry Number: " + (userGuessedNumber + 1);
+            return "Your guess is Lesser, try a Greater Number.\nTry Number: " + (userGuessedNumber + 1);
         }
     }
 }
