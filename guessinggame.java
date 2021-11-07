@@ -10,7 +10,7 @@ public class Main {
         while (userGuessedNumber != generatedNumber)
         {
             String response = JOptionPane.showInputDialog(null,
-                    "Enter a guess between 1 and 100", "Guessing Game", 3);
+                    "Enter a guess between 1 and 100", "Guessing Game", JOptionPane.QUESTION_MESSAGE);
             userGuessedNumber = Integer.parseInt(response);
             JOptionPane.showMessageDialog(null, ""+ determineGuess(userGuessedNumber, generatedNumber, count));
             count++;
@@ -27,11 +27,8 @@ public class Main {
         else if (userGuessedNumber > generatedNumber) {
             return "Your guess is greater, try a lesser number.\nTry Number: " + (userGuessedNumber - 1);
         }
-        else if (userGuessedNumber < generatedNumber) {
-            return "Your guess is lesser, try greater number.\nTry Number: " + (userGuessedNumber + 1);
-        }
         else {
-            return "Your guess is incorrect \n Try Number: " + count;
+            return "Your guess is lesser, try greater number.\nTry Number: " + (userGuessedNumber + 1);
         }
     }
 }
