@@ -25,13 +25,13 @@ public class Main {
             return "Correct!\nTotal Guesses: " + count;
         }
         else if (userGuessedNumber > generatedNumber) {
-            return "Your guess is high, try again.\nTry Number: " + count;
+            return "Your guess is greater, try a lesser number.\nTry Number: " + (userGuessedNumber - 1);
         }
         else if (userGuessedNumber < generatedNumber) {
-            return "Your guess is low, try again.\nTry Number: " + count;
+            return "Your guess is lesser, try greater number.\nTry Number: " + (userGuessedNumber + 1);
         }
         else {
-            return "Your guess is incorrect\nTry Number: " + count;
+            return "Your guess is incorrect \n Try Number: " + count;
         }
     }
 }
