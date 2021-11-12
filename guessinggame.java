@@ -3,8 +3,7 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         int generatedNumber = (int) (Math.random()*100 + 1);
-        int userGuessedNumber = 0;
-        System.out.println("The correct guess would be " + generatedNumber);
+        int userGuessedNumber = 0;    
         int count = 0;
         int score = 100;
 
